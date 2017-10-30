@@ -10,8 +10,10 @@
  */
 
 
-;(function(window, undefined) {
+;(function(undefined) {
 	'use strict';
+
+	if(typeof window === 'undefined') return; // don't run for server side render
 
 	var
 		autoResize            = true,
@@ -999,7 +1001,7 @@
 					setTimeout(function(){ initLock = false;},eventCancelTimer);
 				}
 
-				if (document.body){
+				if (document.readyState === "interactive" || document.readyState === "complete"){
 					fireInit();
 				} else {
 					log('Waiting for page ready');
@@ -1054,7 +1056,7 @@
 		}
 
 		function isMiddleTier(){
-			return ('iFrameResize' in window);
+			return !(typeof module !== 'undefined' && module.exports) && ('iFrameResize' in window);
 		}
 
 		function isInitMsg(){
@@ -1101,4 +1103,4 @@
 
 	
 
-})(window || {});
+})();

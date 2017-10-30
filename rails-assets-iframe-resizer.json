@@ -1,14 +1,14 @@
 {
   "name": "rails-assets-iframe-resizer",
   "downloads": null,
-  "version": "3.5.7",
+  "version": "3.5.15",
   "version_downloads": null,
   "platform": "ruby",
   "authors": "rails-assets.org",
   "info": "Responsively keep same and cross domain iFrames sized to their content with support for window/content resizing, multiple and nested iFrames. (Dependacy free and works with IE8+)",
-  
+
   "licenses": "MIT",
-  
+
   "metadata": {
 
   },
@@ -23,7 +23,7 @@
   "bug_tracker_uri": null,
   "dependencies": {
     "development": [
-    
+
     ],
     "runtime": [
 
